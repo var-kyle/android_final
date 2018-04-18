@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.afinal.group.best.androidfinal.DoctorForm">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titleDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titleDoctor"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/fullNameDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fullNameDoctor"
+        android:inputType="text"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/addressDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/addressDoctor"
+        android:inputType="text"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/birthdayDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/birthdayDoctor"
+        android:inputType="date"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/phoneDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone Number"
+        android:inputType="phone"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+    <EditText
+        android:id="@+id/healthCardDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/healthCardDoctor"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+    <EditText
+        android:id="@+id/infoDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/infoDoctor"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/submitButtonDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submitButtonDoctor" />
+</LinearLayout>
+
+

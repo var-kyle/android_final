@@ -19,8 +19,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".OCTranspoMainActivity" />
-        <activity android:name=".MovieInfoMainActivity"
-            android:label="@string/activity_movie"></activity>
+        <activity
+            android:name=".MovieInfoMainActivity"
+            android:label="@string/activity_movie" />
+        <activity android:name=".DoctorForm" />
+        <activity android:name=".DentistForm" />
+        <activity android:name=".OptometristForm" />
+        <activity android:name=".PatientIntakeFormMain"></activity>
     </application>
 
 </manifest>

@@ -69,8 +69,8 @@ public class LaunchActivity extends AppCompatActivity {
                         startActivity(intent);
                 break;
             case R.id.activity2:
-                        //Intent intent = new Intent(LaunchActivity.this, IntakeFormMainActivity.class);
-                        //startActivity(intent);
+                        Intent intent2 = new Intent(LaunchActivity.this, PatientIntakeFormMain.class);
+                        startActivity(intent2);
                 break;
             case R.id.activity3:
                         Intent intent3 = new Intent(LaunchActivity.this, MovieInfoMainActivity.class);
