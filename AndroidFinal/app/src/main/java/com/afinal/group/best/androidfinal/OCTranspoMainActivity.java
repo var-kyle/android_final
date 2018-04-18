@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -34,6 +35,13 @@ public class OCTranspoMainActivity extends Activity {
     private ListView stopInfo;
     private ArrayList<String> busInfo;
 
+    /**
+     * creates the list view of search results as well as the bottom search bar.
+     * the list view is populated from oc transpo's api
+     * search for stop numbers
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +61,8 @@ public class OCTranspoMainActivity extends Activity {
                         "?appID=" +APPID +
                         "&apiKey=" + APIKEY +
                         "&stopNo=" + stopNum;
+
+                busInfo.clear();
 
                 AsyncBusInfo task = new AsyncBusInfo();
                 task.execute(stopUrl);
@@ -124,6 +134,10 @@ public class OCTranspoMainActivity extends Activity {
                     android.R.layout.simple_list_item_1,
                     busInfo );
             stopInfo.setAdapter(arrayAdapter);
+
+            if (busInfo == null || busInfo.size() == 0) {
+                Toast.makeText(getApplicationContext(), "This stop does not exist!", Toast.LENGTH_SHORT).show();
+            }
 
             stopInfo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override

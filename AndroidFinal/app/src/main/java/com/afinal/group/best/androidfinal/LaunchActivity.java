@@ -82,6 +82,10 @@ public class LaunchActivity extends AppCompatActivity {
                 break;
             case R.id.movie_about:
                 onCreateMovieDialog().show();
+                break;
+            case R.id.oc_about:
+                onCreateOCDialog().show();
+                break;
         }
         return true;
 
@@ -111,6 +115,22 @@ public class LaunchActivity extends AppCompatActivity {
             }
         });
 // Create the AlertDialog
+        return builder.create();
+
+    }
+
+    public Dialog onCreateOCDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        LayoutInflater inflater = this.getLayoutInflater();
+
+        View v = inflater.inflate(R.layout.oc_about, null);
+        builder.setView(v);
+
+        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            }
+        });
         return builder.create();
 
     }

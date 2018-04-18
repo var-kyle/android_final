@@ -57,4 +57,8 @@
     <string name="gps_speed">GPS speed (km/h): </string>
     <string name="latitude">Latitude: </string>
     <string name="longitude">Longitude: </string>
+    <string name="cantfindstop">This stop does not exist!</string>
+    <string name="oc_author">Author: Kyle Meelker</string>
+    <string name="oc_version">Version: 0.9c</string>
+    <string name="oc_description">To use the OC Transpo Route Planner, first search for a stop number. You may select a result to view more details about the route.</string>
 </resources>
