@@ -16,11 +16,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-<<<<<<< HEAD
-
-
-
-=======
 //LaunchActivity.java
 //• Author: Maxwell Warwick
 //• Course: CST2335 – Android
@@ -33,7 +28,6 @@ import android.widget.EditText;
  * This class creates the start activity for the application with a toolbar for directing to
  * activities
  */
->>>>>>> be5e1ebd739a5e849e86fa088abf540e44406f3f
 public class LaunchActivity extends AppCompatActivity {
 
     /**

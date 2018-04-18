@@ -28,16 +28,46 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+//MovieInfoMainActivity.java
+//• Author: Maxwell Warwick
+//• Course: CST2335 – Android
+//• Assignment: Final
+//• Date: 2018-04-18
+//• Professor: Torunski
+//• Purpose: Read Movie Info from XML, display data and various Android functions
+
+/**
+ * This class contains the methods to read XML data and perform various Android functions
+ *
+ * @author Maxwell Warwick
+ * @version 1.0
+ */
 public class MovieInfoMainActivity extends AppCompatActivity {
 
+    /**
+     * Perform functions upon activity creation
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_info_main);
+        /**
+         * Progress Bar showing progress of loading XML data
+         */
         ProgressBar pB = findViewById(R.id.progressBar2);
         pB.setVisibility(View.VISIBLE);
+        /**
+         * Instance of MovieQuery
+         */
         final MovieQuery mQ = new MovieQuery();
+        /**
+         * Image button with Mad Max: Fury Road poster
+         */
         ImageButton madMaxFR = findViewById(R.id.imageButton);
+        /**
+         * Image button with Mad Max poster
+         */
         ImageButton madMax = findViewById(R.id.imageButton2);
         mQ.execute();
 
@@ -60,31 +90,85 @@ public class MovieInfoMainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This class handles the asynctask of retrieving and updating data from XML source
+     */
     public class MovieQuery extends AsyncTask<String, Integer, String> {
 
+        /**
+         * Temporary string to save current movie title
+         */
         String movie = "";
+        /**
+         * Temporary string to save current main actors
+         */
         String actors = "";
+        /**
+         * Temporary string to save current length
+         */
         String length = "";
+        /**
+         * Temporary string to save current description
+         */
         String desc = "";
+        /**
+         * Temporary string to save current rating
+         */
         String rating = "";
+        /**
+         * Temporary string to save current genre
+         */
         String genre = "";
+        /**
+         * List to save main actors from each movie
+         */
         List<String> actorsList = new ArrayList<>();
+        /**
+         * List to save lengths of each movie
+         */
         List<String> lengths = new ArrayList<>();
+        /**
+         * List to save titles of each movie
+         */
         List<String> movies = new ArrayList<>();
+        /**
+         * List to save descriptions of each movie
+         */
         List<String> descs = new ArrayList<>();
+        /**
+         * List to save ratings of each movie
+         */
         List<String> ratings = new ArrayList<>();
+        /**
+         * List to save genres of each movie
+         */
         List<String> genres = new ArrayList<>();
+        /**
+         * ListView to display movie titles
+         */
         ListView movieList = findViewById(R.id.list_view);
 
 
-
+        /**
+         * URL for XML resource page
+         */
         String urlString = "http://torunski.ca/CST2335/MovieInfo.xml";
 
+        /**
+         * Perform functions to be completed in background thread, to update on postExecute
+         * @param args
+         * @return
+         */
         protected String doInBackground(String... args){
             try{URL url = new URL(urlString);
+                /**
+                 * URL Connection for page containing XML
+                 */
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
-
+                /**
+                 * Pull Parser to retrieve XML data
+                 */
                 XmlPullParser parser = Xml.newPullParser();
                 parser.setInput(conn.getInputStream(), null);
 
@@ -93,6 +177,9 @@ public class MovieInfoMainActivity extends AppCompatActivity {
                         parser.next();
                         continue;
                     }
+                    /**
+                     * Name of current tag
+                     */
                     String name = parser.getName();
 
                     if(name.equals("Title")){
@@ -134,8 +221,15 @@ public class MovieInfoMainActivity extends AppCompatActivity {
 
         }
 
+        /**
+         * Show progress updates of progressBar
+         * @param value
+         */
         @Override
         public void onProgressUpdate(Integer... value){
+            /**
+             * Progress bar showing progress of loading XML data
+             */
             ProgressBar pB = findViewById(R.id.progressBar2);
             pB.setVisibility(View.VISIBLE);
             pB.setProgress(value[0]);
@@ -146,9 +240,19 @@ public class MovieInfoMainActivity extends AppCompatActivity {
             }
         }
 
+        /**
+         * Use functions from doInBackground to update data views
+         * @param s
+         */
         @Override
         public void onPostExecute(String s){
+            /**
+             * ProgressBar showing progress of loading XML data
+             */
             ProgressBar pB = findViewById(R.id.progressBar2);
+            /**
+             * Button to click and view Snackbar Message
+             */
             Button stats = findViewById(R.id.button);
 
             stats.setOnClickListener(new View.OnClickListener() {
@@ -185,15 +289,46 @@ public class MovieInfoMainActivity extends AppCompatActivity {
 
         }
 
+        /**
+         * Create custom dialog based on Mad Max movie info from XML
+         * @return
+         */
         public Dialog createMadMaxDialog() {
+            /**
+             * Builder for custom dialog
+             */
             AlertDialog.Builder builder = new AlertDialog.Builder(MovieInfoMainActivity.this);
+            /**
+             * Inflater for dialog layout
+             */
             LayoutInflater inflater = MovieInfoMainActivity.this.getLayoutInflater();
+            /**
+             * View to display dialog layout
+             */
             View alertView = inflater.inflate(R.layout.alert, null);
+            /**
+             * View of movie title
+             */
             TextView titleView = alertView.findViewById(R.id.textView);
+            /**
+             * View of main actors
+             */
             TextView actorView = alertView.findViewById(R.id.textView2);
+            /**
+             * View of length
+             */
             TextView lengthView = alertView.findViewById(R.id.textView3);
+            /**
+             * View of description
+             */
             TextView descView = alertView.findViewById(R.id.textView4);
+            /**
+             * View of rating
+             */
             TextView ratingView = alertView.findViewById(R.id.textView5);
+            /**
+             * View of genre
+             */
             TextView genreView = alertView.findViewById(R.id.textView6);
 
 
@@ -215,15 +350,46 @@ public class MovieInfoMainActivity extends AppCompatActivity {
 
         }
 
+        /**
+         * Create custom dialog based on Mad Max: Fury Road info from XML
+         * @return
+         */
         public Dialog createMadMaxFRDialog() {
+            /**
+             * Builder for custom dialog
+             */
             AlertDialog.Builder builder = new AlertDialog.Builder(MovieInfoMainActivity.this);
+            /**
+             * Inflater for dialog layout
+             */
             LayoutInflater inflater = MovieInfoMainActivity.this.getLayoutInflater();
+            /**
+             * View displaying dialog layout
+             */
             View alertView = inflater.inflate(R.layout.alert, null);
+            /**
+             * View of movie title
+             */
             TextView titleView = alertView.findViewById(R.id.textView);
+            /**
+             * View of main actors
+             */
             TextView actorView = alertView.findViewById(R.id.textView2);
+            /**
+             * View of length
+             */
             TextView lengthView = alertView.findViewById(R.id.textView3);
+            /**
+             * View of description
+             */
             TextView descView = alertView.findViewById(R.id.textView4);
+            /**
+             * View of rating
+             */
             TextView ratingView = alertView.findViewById(R.id.textView5);
+            /**
+             * View of genre
+             */
             TextView genreView = alertView.findViewById(R.id.textView6);
 
 
