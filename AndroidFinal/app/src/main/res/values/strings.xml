@@ -4,4 +4,13 @@
     <string name="btnIntakeForm">Patient Intake Form</string>
     <string name="btnMovieInfo">Movie Information</string>
     <string name="btnOCTranspo">OC Transpo Bus Route App</string>
+    <string name="ok">OK</string>
+    <string name="activity_movie">Movie Activity</string>
+    <string name="movie_author">Author: Maxwell Warwick</string>
+    <string name="movie_version">Version: 1.0</string>
+    <string name="movie_description">Instructions: Clicking items of the list of movies at the top
+    of the page will open a dialog window with information on that movie. Clicking on the
+    poster images will respond with a toast message displaying that movie's title. Clicking
+    on the rating statistics button will respond with a snackbar message displaying the minimum,
+    maximum, and average movie ratings</string>
 </resources>

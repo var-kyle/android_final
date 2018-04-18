@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.afinal.group.best.androidfinal.MovieInfoMainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Movie Info"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="16dp" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <ListView
+        android:id="@+id/list_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Title:"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="65dp" />
+        android:layout_height="200dp"
+        android:layout_marginBottom="50dp"
+         />
 
-    <TextView
-        android:id="@+id/textView3"
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Main Cast:"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="84dp" />
+        android:layout_below="@id/imageButton"
+        android:layout_centerHorizontal="true"
+        />
 
-    <TextView
-        android:id="@+id/textView4"
+    <ImageButton
+        android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Release Date:"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="103dp" />
+        android:layout_below="@+id/list_view"
+        android:src="@drawable/madmaxfr" />
 
-    <TextView
-        android:id="@+id/textView5"
+    <ImageButton
+        android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Duration:"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="122dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_below="@+id/list_view"
+        android:layout_toRightOf="@+id/imageButton"
+        android:src="@drawable/madmax" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Rating Statistics"/>
+
+</RelativeLayout>

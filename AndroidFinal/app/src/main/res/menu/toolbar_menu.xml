@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/activity1"
+        android:title="home"
+        android:icon="@drawable/activity1"
+        android:orderInCategory="101"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/activity2"
+        android:title="camera"
+        android:icon="@drawable/activity2"
+        android:orderInCategory="151"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/activity3"
+        android:title="phone"
+        android:icon="@drawable/activity3"
+        android:orderInCategory="201"
+        app:showAsAction="always" />
+    <item android:id="@+id/activity4"
+        android:title="about"
+        android:icon="@drawable/activity4"
+        android:orderInCategory="201"
+        app:showAsAction="always"/>
+    <item android:id="@+id/intake_about"
+    android:title="Patient Intake About"
+    android:orderInCategory="201"
+    app:showAsAction="never"
+    />
+    <item android:id="@+id/quiz_about"
+        android:title="Quiz About"
+        android:orderInCategory="201"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/movie_about"
+        android:title="Movie Info About"
+        android:orderInCategory="201"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/oc_about"
+        android:title="OCTranspo About"
+        android:orderInCategory="201"
+        app:showAsAction="never"/>
+</menu>
