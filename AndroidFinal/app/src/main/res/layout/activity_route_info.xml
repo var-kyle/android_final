@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Destination: "/>
+            android:text="@string/destination"/>
 
         <TextView
             android:id="@+id/route_dest"
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Start Time: "/>
+            android:text="@string/start_time"/>
 
         <TextView
             android:id="@+id/route_start"
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Start Time: "/>
+            android:text="@string/adj_start_time"/>
 
         <TextView
             android:id="@+id/route_adj_start"
@@ -70,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="GPS speed (km/h): "/>
+            android:text="@string/gps_speed"/>
 
         <TextView
             android:id="@+id/route_gps"
@@ -89,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Latitude: "/>
+            android:text="@string/latitude"/>
 
         <TextView
             android:id="@+id/route_lat"
@@ -101,7 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Longitude: "/>
+            android:text="@string/longitude"/>
 
         <TextView
             android:id="@+id/route_lon"
