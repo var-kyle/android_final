@@ -38,6 +38,9 @@ public class LaunchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
+        /**
+         * Toolbar for launch activity
+         */
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -89,8 +92,17 @@ public class LaunchActivity extends AppCompatActivity {
      * @return
      */
     public Dialog onCreateMovieDialog() {
+        /**
+         * Builder for custom dialog
+         */
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        /**
+         * Inflater for dialog layout
+         */
         LayoutInflater inflater = this.getLayoutInflater();
+        /**
+         * View containing inflated layout
+         */
         View v = inflater.inflate(R.layout.movie_about, null);
         builder.setView(v);
 // Add the buttons
