@@ -13,4 +13,38 @@
     poster images will respond with a toast message displaying that movie's title. Clicking
     on the rating statistics button will respond with a snackbar message displaying the minimum,
     maximum, and average movie ratings</string>
+
+    <string name="optoTitle">Optometrist\'s Office New Patient Intake Form:</string>
+    <string name="fullNameOpto">Enter Full Name</string>
+    <string name="addressOpto">Enter Address</string>
+    <string name="birthdayOpto">Enter Birthday ((dd/mm/yyyy)</string>
+    <string name="phoneOpto">Enter Phone Number</string>
+    <string name="healthCardOpto">Enter Health Card Number</string>
+    <string name="purchaseDate">Enter date of glasses purchase (dd/mm/yyyy)</string>
+    <string name="infoOpto">What store did you buy your glasses from?</string>
+    <string name="submitButtonOpto">Submit</string>
+
+    <string name="titleDentist">Dentist Office New Patient Intake Form:</string>
+    <string name="fullNameDentist">Enter Full Name</string>
+    <string name="addressDentist">Enter Address</string>
+    <string name="birthdayDentist">Enter Birthday (dd/mm/yyyy)</string>
+    <string name="phoneDentist">Enter Phone Number</string>
+    <string name="healthCardDentist">Enter Health Card Number</string>
+    <string name="infoDentist">Do you have any medical benefits?</string>
+    <string name="braces">Select if you have had braces before?</string>
+    <string name="submitButtonDentist">Submit</string>
+
+    <string name="fullNameDoctor">Enter Full Name</string>
+    <string name="titleDoctor">Doctor\'s Office New Patient Intake Form:</string>
+    <string name="addressDoctor">Enter Address</string>
+    <string name="birthdayDoctor">Enter Birthday (dd/mm/yyyy)</string>
+    <string name="phoneDoctor">Enter Phone Number</string>
+    <string name="healthCardDoctor">Enter Health Card Number</string>
+    <string name="infoDoctor">Indicate Any Previous Surgeries or Current Allergies</string>
+    <string name="submitButtonDoctor">Submit</string>
+
+    <string name="Button01">Add a New Doctor\'s Patient</string>
+    <string name="Button02">Add a New Dentist\'s Patient</string>
+    <string name="Button03">Add a New Optometrist Patient</string>
+    <string name="intakeTitle">Current Patient Listings:</string>
 </resources>

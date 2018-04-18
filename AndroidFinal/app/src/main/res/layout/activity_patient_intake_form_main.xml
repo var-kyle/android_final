@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        tools:context="com.afinal.group.best.androidfinal.PatientIntakeFormMain">
+        >
+        <TextView
+            android:id="@+id/intakeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intakeTitle"
+            android:textAlignment="center"/>
+
+
+        <ListView
+            android:id="@+id/patientList"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"></ListView>
+
+        <RelativeLayout android:id="@+id/FrameLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/Button01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/Button01"></Button>
+
+        <Button
+            android:id="@+id/Button03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/Button03">
+
+        </Button>
+
+        <Button
+            android:id="@+id/Button02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Button02"></Button>
+
+    </LinearLayout>
+
