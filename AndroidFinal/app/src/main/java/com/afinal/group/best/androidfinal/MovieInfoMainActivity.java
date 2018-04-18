@@ -28,8 +28,26 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+//MovieInfoMainActivity.java
+//• Author: Maxwell Warwick
+//• Course: CST2335 – Android
+//• Assignment: Final
+//• Date: 2018-04-18
+//• Professor: Torunski
+//• Purpose: Read Movie Info from XML, display data and various Android functions
+
+/**
+ * This class contains the methods to read XML data and perform various Android functions
+ *
+ * @author Maxwell Warwick
+ * @version 1.0
+ */
 public class MovieInfoMainActivity extends AppCompatActivity {
 
+    /**
+     * Perform functions upon activity creation
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +78,9 @@ public class MovieInfoMainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This class handles the asynctask of retrieving and updating data from XML source
+     */
     public class MovieQuery extends AsyncTask<String, Integer, String> {
 
         String movie = "";
@@ -80,6 +101,11 @@ public class MovieInfoMainActivity extends AppCompatActivity {
 
         String urlString = "http://torunski.ca/CST2335/MovieInfo.xml";
 
+        /**
+         * Perform functions to be completed in background thread, to update on postExecute
+         * @param args
+         * @return
+         */
         protected String doInBackground(String... args){
             try{URL url = new URL(urlString);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -134,6 +160,10 @@ public class MovieInfoMainActivity extends AppCompatActivity {
 
         }
 
+        /**
+         * Show progress updates of progressBar
+         * @param value
+         */
         @Override
         public void onProgressUpdate(Integer... value){
             ProgressBar pB = findViewById(R.id.progressBar2);
@@ -146,6 +176,10 @@ public class MovieInfoMainActivity extends AppCompatActivity {
             }
         }
 
+        /**
+         * Use functions from doInBackground to update data views
+         * @param s
+         */
         @Override
         public void onPostExecute(String s){
             ProgressBar pB = findViewById(R.id.progressBar2);
@@ -185,6 +219,10 @@ public class MovieInfoMainActivity extends AppCompatActivity {
 
         }
 
+        /**
+         * Create custom dialog based on Mad Max movie info from XML
+         * @return
+         */
         public Dialog createMadMaxDialog() {
             AlertDialog.Builder builder = new AlertDialog.Builder(MovieInfoMainActivity.this);
             LayoutInflater inflater = MovieInfoMainActivity.this.getLayoutInflater();
@@ -215,6 +253,10 @@ public class MovieInfoMainActivity extends AppCompatActivity {
 
         }
 
+        /**
+         * Create custom dialog based on Mad Max: Fury Road info from XML
+         * @return
+         */
         public Dialog createMadMaxFRDialog() {
             AlertDialog.Builder builder = new AlertDialog.Builder(MovieInfoMainActivity.this);
             LayoutInflater inflater = MovieInfoMainActivity.this.getLayoutInflater();

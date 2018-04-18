@@ -16,8 +16,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+//LaunchActivity.java
+//• Author: Maxwell Warwick
+//• Course: CST2335 – Android
+//• Assignment: Final
+//• Date: 2018-04-18
+//• Professor: Torunski
+//• Purpose: Start activity for the application with toolbar to direct to individual activities
+
+/**
+ * This class creates the start activity for the application with a toolbar for directing to
+ * activities
+ */
 public class LaunchActivity extends AppCompatActivity {
 
+    /**
+     * Perform functions upon creation of activity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,12 +43,22 @@ public class LaunchActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Perform inflation of toolbar_menu layout
+     * @param m
+     * @return
+     */
     public boolean onCreateOptionsMenu(Menu m){
         getMenuInflater().inflate(R.menu.toolbar_menu, m );
         return true;
 
     }
 
+    /**
+     * Handle tasks based on clicking options in toolbar
+     * @param mi
+     * @return
+     */
     public boolean onOptionsItemSelected(MenuItem mi){
         switch(mi.getItemId()){
             case R.id.activity1:
@@ -58,6 +84,10 @@ public class LaunchActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Create dialog with information on the Movie Info Activity
+     * @return
+     */
     public Dialog onCreateMovieDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
