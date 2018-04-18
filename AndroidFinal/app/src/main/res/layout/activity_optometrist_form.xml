@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.afinal.group.best.androidfinal.OptometristForm">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/optoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/optoTitle"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/fullNameOpto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="@id/title"
+        android:hint="@string/fullNameOpto"
+        android:inputType="text"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/addressOpto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/addressOpto"
+        android:inputType="text"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/birthdayOpto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/birthdayOpto"
+        android:inputType="date"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/phoneOpto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phoneOpto"
+        android:inputType="phone"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+    <EditText
+        android:id="@+id/healthCardOpto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/healthCardOpto"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+    <EditText
+        android:id="@+id/purchaseDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/purchaseDate"
+        android:inputType="date"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/infoOpto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/infoOpto"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/submitButtonOpto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submitButtonOpto" />
+
+
+</LinearLayout>

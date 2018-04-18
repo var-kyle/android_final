@@ -22,7 +22,14 @@
         <activity
             android:name=".MovieInfoMainActivity"
             android:label="@string/activity_movie" />
+<<<<<<< HEAD
         <activity android:name=".RouteInfoActivity"></activity>
+=======
+        <activity android:name=".DoctorForm" />
+        <activity android:name=".DentistForm" />
+        <activity android:name=".OptometristForm" />
+        <activity android:name=".PatientIntakeFormMain"></activity>
+>>>>>>> 67b591d1f0f3563aa28d17c283b38994279b40f0
     </application>
 
 </manifest>

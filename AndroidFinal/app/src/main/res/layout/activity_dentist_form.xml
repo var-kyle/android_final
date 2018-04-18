@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.afinal.group.best.androidfinal.DentistForm">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titleDentist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titleDentist"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/fullNameDentist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="@id/title"
+        android:hint="@string/fullNameDentist"
+        android:inputType="text"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/addressDentist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/addressDentist"
+        android:inputType="text"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/birthdayDentist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/birthdayDentist"
+        android:inputType="date"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/phoneDentist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phoneDentist"
+        android:inputType="phone"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+    <EditText
+        android:id="@+id/healthCardDentist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/healthCardDentist"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+    <EditText
+        android:id="@+id/infoDentist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/infoDentist"
+        android:paddingTop="5dp"
+        android:visibility="visible" />
+
+    <CheckBox
+        android:id="@+id/braces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/braces" />
+
+    <Button
+        android:id="@+id/submitButtonDentist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submitButtonDentist" />
+</LinearLayout>
