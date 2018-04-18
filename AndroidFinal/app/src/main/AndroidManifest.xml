@@ -19,8 +19,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".OCTranspoMainActivity" />
-        <activity android:name=".MovieInfoMainActivity"
-            android:label="@string/activity_movie"></activity>
+        <activity
+            android:name=".MovieInfoMainActivity"
+            android:label="@string/activity_movie" />
+        <activity android:name=".RouteInfoActivity"></activity>
     </application>
 
 </manifest>
